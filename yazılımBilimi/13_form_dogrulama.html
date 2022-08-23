@@ -26,18 +26,28 @@
     </div>
     <hr>
     <div class="container">
+        <form name="form1" action="gonder.php" method="POST" onsubmit="return dogrula();">
+            <input type="text" name="isim"/>
+
+            <button type="submit">Gönder</button>
+        </form>
 
     </div>
     
 </body>
 <script>
-    var a;
 
-    a = 10;
+function dogrula(){
+    var form = document.forms["form1"];
+    var deger = form["isim"].value;
 
-    var b = a * 2 + 10;
+    if(deger == ""){
+        alert("isim alanı boş bırakılamaz..");
+        return false;
+    }
+    return true;
+}
 
-    alert("b'nin değeri: " + b);
 
 </script>
 </html>

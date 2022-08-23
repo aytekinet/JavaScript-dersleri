@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Js Dersi</title>
+    <style>
+        .header{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+            background: red;
+            color: #ffffff;
+        }
+        .container{
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Javascript</h1>
+    </div>
+    <hr>
+    <div class="container">
+
+    </div>
+    
+</body>
+<script>
+/*
+var calisan = new Object();
+calisan.isim = "Emre";
+calisan.soyisim = "Coşkun";
+calisan.isimBilgileri = function(){
+    return "İsim/Soyisim Bilgileri: " + this.isim + " / " + this.soyisim; 
+};
+
+console.log(calisan.isim);
+console.log(calisan.soyisim);
+console.log(calisan.isimBilgileri());
+*/
+
+
+function calisan(isim,soyisim,numara) {
+    this.isim = isim;
+    this.soyisim = soyisim;
+    this.numara = numara;
+    this.bilgileriGoster = function(){
+        return "İsim: " + this.isim + "\nSoyisim : " + this.soyisim + "\nNumara : " + this.numara
+
+    }
+    
+}
+var calisan1 = new calisan("Emre", "Coşkun", 1234567);
+var calisan2 = new calisan("Ahmet", "Özkan", 1234665567);
+
+console.log(calisan1.bilgileriGoster());
+console.log(calisan2.bilgileriGoster());
+
+
+
+
+</script>
+</html>

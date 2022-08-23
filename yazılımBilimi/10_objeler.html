@@ -31,13 +31,30 @@
     
 </body>
 <script>
-    var a;
 
-    a = 10;
+var calisan = {
+    isim: "Mustafa Murat ",
+    soyisim:"Coşkun",
+    numara: 123456,
+    diller: "Diller: " + ["Php", "Java", "C++"],
+    adres : {
+        cadde : "Atatürk",
+        sokak : "1881. sokak",
+    },
+    isimBilgileri : function(){
+        return "İsim: " + this.isim + "Soyisim: " + this.soyisim; 
+    }
 
-    var b = a * 2 + 10;
+};
 
-    alert("b'nin değeri: " + b);
+console.log(calisan.isim);
+console.log(calisan.numara);
+console.log(calisan.diller);
+console.log(calisan.adres.cadde);
+console.log(calisan.adres.sokak);
+console.log(calisan.isimBilgileri()); 
+
+
 
 </script>
 </html>
